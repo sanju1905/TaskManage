@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Task Form</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Add a New Task</h1>
+    <form action="/add-task" method="POST">
+      <div class="form-group">
+        <label for="name">Task Name:</label>
+        <input type="text" class="form-control" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Task Description:</label>
+        <textarea class="form-control" name="description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="status">Task Status:</label>
+        <select class="form-control" name="status" required>
+          <option value="To Do">To Do</option>
+          <option value="Doing">Doing</option>
+          <option value="Done">Done</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Task</button>
+      <a href="/tasks" class="btn btn-warning">Dashboard</a>
+    </form>
+  </div>
+</body>
+</html>

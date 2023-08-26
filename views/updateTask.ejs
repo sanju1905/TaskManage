@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Task</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  
+  <form action="/update-task" method="POST">
+    <div class="mt-5">
+      <center>
+        <h4 class="text-primary">Update The Task</h4>
+      </center>
+    </div>
+    <div class="form-group mt-5">
+      <label for="task">Task Name to Update:</label>
+      <input type="text" class="form-control" name="task" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Task Description:</label>
+      <textarea class="form-control" name="description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="status">Task Status:</label>
+      <select class="form-control" name="status" required>
+        <option value="To Do">To Do</option>
+        <option value="Doing">Doing</option>
+        <option value="Done">Done</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Task</button>
+    <a href="/tasks" class="btn btn-warning">Dashboard</a>
+  </form>
+ 
+
+</body>
+
+</html>
